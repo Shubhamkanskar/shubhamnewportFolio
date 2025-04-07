@@ -68,6 +68,43 @@ export const SparklesCore = (props: ParticlesProps) => {
               enable: true,
               zIndex: -1,
             },
+            detectRetina: true,
+            responsive: [
+              {
+                maxWidth: 768,
+                options: {
+                  particles: {
+                    number: {
+                      value: 100,
+                      density: {
+                        enable: true,
+                        width: 375,
+                        height: 812,
+                      },
+                    },
+                    move: {
+                      speed: {
+                        min: 0.3,
+                        max: 1,
+                      },
+                      enable: true,
+                    },
+                    size: {
+                      value: {
+                        min: 0.6,
+                        max: 1.5,
+                      },
+                    },
+                    opacity: {
+                      value: {
+                        min: 0.3,
+                        max: 1,
+                      },
+                    },
+                  },
+                },
+              },
+            ],
 
             fpsLimit: 120,
             interactivity: {
@@ -200,12 +237,16 @@ export const SparklesCore = (props: ParticlesProps) => {
                 },
                 outModes: {
                   default: "out",
+                  bottom: "out",
+                  left: "out",
+                  right: "out",
+                  top: "out",
                 },
-                random: false,
+                random: true,
                 size: false,
                 speed: {
-                  min: 0.1,
-                  max: 1,
+                  min: 0.2,
+                  max: 0.8,
                 },
                 spin: {
                   acceleration: 0,
@@ -232,6 +273,7 @@ export const SparklesCore = (props: ParticlesProps) => {
                 },
                 value: particleDensity || 200,
               },
+
               opacity: {
                 value: {
                   min: 0.1,
@@ -425,7 +467,6 @@ export const SparklesCore = (props: ParticlesProps) => {
                 speed: 1,
               },
             },
-            detectRetina: true,
           }}
         />
       )}

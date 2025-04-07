@@ -37,7 +37,7 @@ export const CardSpotlightWithBeams = ({
   return (
     <div
       className={cn(
-        "group/spotlight p-6 rounded-[1.25rem] relative border border-neutral-800 bg-black dark:border-neutral-800 overflow-hidden",
+        "group/spotlight p-3 sm:p-4 md:p-5 rounded-[1rem] relative border border-neutral-800 bg-black dark:border-neutral-800 overflow-hidden",
         className
       )}
       onMouseMove={handleMouseMove}
@@ -46,7 +46,7 @@ export const CardSpotlightWithBeams = ({
       {...props}
     >
       <motion.div
-        className="pointer-events-none absolute z-0 -inset-px rounded-[1.25rem] opacity-0 transition duration-300 group-hover/spotlight:opacity-100"
+        className="pointer-events-none absolute z-0 -inset-px rounded-[1rem] opacity-0 transition duration-300 group-hover/spotlight:opacity-100"
         style={{
           backgroundColor: color,
           maskImage: useMotionTemplate`
@@ -70,7 +70,7 @@ export const CardSpotlightWithBeams = ({
           />
         )}
       </motion.div>
-      <BackgroundBeams className="opacity-30" />
+      <BackgroundBeams className="opacity-40" />
       {children}
     </div>
   );

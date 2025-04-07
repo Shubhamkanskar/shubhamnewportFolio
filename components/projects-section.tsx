@@ -6,9 +6,11 @@ import { Button } from "@/components/ui/button";
 
 export function ProjectsSection() {
   return (
-    <section id="projects" className="py-4 bg-black">
-      <h2 className="text-3xl md:text-4xl font-bold mb-4">Projects</h2>
-      <div className="space-y-4">
+    <section id="projects" className="py-3 sm:py-4 bg-black">
+      <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3">
+        Projects
+      </h2>
+      <div className="space-y-3">
         <ProjectCard
           title="PDF AI"
           description="A sophisticated PDF analysis platform leveraging Google's Gemini AI for intelligent document processing."
@@ -19,6 +21,8 @@ export function ProjectsSection() {
             "Convex DB for real-time data synchronization",
           ]}
           technologies={["Next.js", "Convex DB", "Gemini AI", "Clerk"]}
+          demoLink="https://pdfai-taupe.vercel.app"
+          codeLink="https://github.com/Shubhamkanskar/pdfai"
         />
         <ProjectCard
           title="Portfolio Website"
@@ -30,6 +34,8 @@ export function ProjectsSection() {
             "Dark mode theme with custom styling",
           ]}
           technologies={["Next.js", "Shadcn", "Tailwind", "Framer Motion"]}
+          demoLink="https://shubhamkanaskardev.xyz"
+          codeLink="https://github.com/Shubhamkanskar/shubhamnewportFolio"
         />
         <ProjectCard
           title="My-Socials"
@@ -41,6 +47,8 @@ export function ProjectsSection() {
             "Custom link management system",
           ]}
           technologies={["Next.js", "Clerk", "MongoDB"]}
+          demoLink="https://my-socials-beta.vercel.app"
+          codeLink="https://github.com/Shubhamkanskar/mysocials"
         />
       </div>
     </section>
@@ -52,22 +60,28 @@ function ProjectCard({
   description,
   features,
   technologies,
+  codeLink,
+  demoLink,
 }: {
   title: string;
   description: string;
   features: string[];
   technologies: string[];
+  codeLink?: string;
+  demoLink?: string;
 }) {
   return (
     <CardSpotlightWithBeams className="h-full">
-      <p className="text-xl font-bold relative z-20 text-white">{title}</p>
-      <div className="text-neutral-200 mt-3 relative z-20">
+      <p className="text-lg sm:text-xl font-bold relative z-20 text-white">
+        {title}
+      </p>
+      <div className="text-neutral-200 mt-2 sm:mt-3 relative z-20">
         {description}
-        <div className="mt-3 flex flex-wrap gap-2">
+        <div className="mt-2 sm:mt-3 flex flex-wrap gap-1.5 sm:gap-2">
           {technologies.map((tech, index) => (
             <span
               key={index}
-              className="text-xs bg-neutral-800 text-white px-2 py-1 rounded-full"
+              className="text-xs bg-neutral-800 text-white px-2 py-0.5 sm:py-1 rounded-full"
             >
               {tech}
             </span>
@@ -79,23 +93,29 @@ function ProjectCard({
           ))}
         </ul>
       </div>
-      <div className="mt-4 flex gap-3 relative z-20">
-        <Button
-          variant="outline"
-          size="sm"
-          className="bg-transparent border-neutral-800 hover:bg-white/10"
-        >
-          <ExternalLink className="h-4 w-4 mr-2" />
-          Code
-        </Button>
-        <Button
-          variant="outline"
-          size="sm"
-          className="bg-transparent border-neutral-800 hover:bg-white/10"
-        >
-          <ExternalLink className="h-4 w-4 mr-2" />
-          Demo
-        </Button>
+      <div className="mt-3 sm:mt-4 flex flex-wrap gap-2 sm:gap-3 relative z-20">
+        {codeLink && (
+          <Button
+            variant="outline"
+            size="sm"
+            className="bg-transparent border-neutral-800 hover:bg-white/10 text-xs sm:text-sm"
+            onClick={() => window.open(codeLink, "_blank")}
+          >
+            <ExternalLink className="h-3 w-3 sm:h-4 sm:w-4 mr-1 sm:mr-2" />
+            Code
+          </Button>
+        )}
+        {demoLink && (
+          <Button
+            variant="outline"
+            size="sm"
+            className="bg-transparent border-neutral-800 hover:bg-white/10 text-xs sm:text-sm"
+            onClick={() => window.open(demoLink, "_blank")}
+          >
+            <ExternalLink className="h-3 w-3 sm:h-4 sm:w-4 mr-1 sm:mr-2" />
+            Demo
+          </Button>
+        )}
       </div>
     </CardSpotlightWithBeams>
   );
@@ -103,9 +123,9 @@ function ProjectCard({
 
 const Step = ({ title }: { title: string }) => {
   return (
-    <li className="flex gap-2 items-start mb-1.5">
-      <Check className="h-4 w-4 text-primary mt-1 flex-shrink-0" />
-      <p className="text-white text-sm">{title}</p>
+    <li className="flex gap-1.5 sm:gap-2 items-start mb-1 sm:mb-1.5">
+      <Check className="h-3 w-3 sm:h-4 sm:w-4 text-primary mt-0.5 sm:mt-1 flex-shrink-0" />
+      <p className="text-white text-xs sm:text-sm">{title}</p>
     </li>
   );
 };

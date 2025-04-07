@@ -14,21 +14,21 @@ export function HeroSection() {
   return (
     <section
       id="home"
-      className="min-h-[60vh] w-full flex flex-col items-center justify-start pt-16 pb-8 overflow-hidden relative"
+      className="min-h-[60vh] w-full flex flex-col items-center justify-center py-12 sm:py-16 overflow-hidden relative"
     >
-      <div className="flex flex-col items-center justify-center gap-2 relative z-20 px-4 text-center">
-        <h1 className="text-4xl md:text-7xl lg:text-8xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-white to-gray-400">
+      <div className="flex flex-col items-center justify-center gap-4 relative z-20 px-4 sm:px-6 text-center">
+        <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-white to-gray-400">
           Shubham Kanaskar
         </h1>
-        <p className="text-gray-400 text-lg md:text-xl max-w-md md:max-w-2xl mb-4">
+        <p className="text-gray-400 text-base sm:text-lg md:text-xl max-w-md md:max-w-2xl mb-4">
           Full-stack developer specializing in Next.js, React, and AI
           integration
         </p>
-        <div className="flex gap-4">
+        <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 w-full sm:w-auto">
           <Button
             variant="default"
             size="lg"
-            className="bg-primary hover:bg-primary/90"
+            className="bg-primary hover:bg-primary/90 w-full sm:w-auto"
             onClick={() => {
               window.open(
                 "https://www.linkedin.com/in/shubham-kanaskar-237280157/",
@@ -38,7 +38,12 @@ export function HeroSection() {
           >
             Connect on LinkedIn
           </Button>
-          <Button variant="outline" size="lg" onClick={scrollToAbout}>
+          <Button
+            variant="outline"
+            size="lg"
+            className="w-full sm:w-auto"
+            onClick={scrollToAbout}
+          >
             Learn More
           </Button>
         </div>

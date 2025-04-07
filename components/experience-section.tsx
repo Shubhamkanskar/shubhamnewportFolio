@@ -4,9 +4,11 @@ import { CardSpotlightWithBeams } from "@/components/ui/card-spotlight-with-beam
 
 export function ExperienceSection() {
   return (
-    <section id="experience" className="py-4 bg-black">
-      <h2 className="text-3xl md:text-4xl font-bold mb-4">Experience</h2>
-      <div className="space-y-4">
+    <section id="experience" className="py-3 sm:py-4 bg-black">
+      <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3">
+        Experience
+      </h2>
+      <div className="space-y-3">
         <ExperienceCard
           title="Team Lead, Full Stack Developer"
           company="Deployh.ai"
@@ -20,8 +22,10 @@ export function ExperienceSection() {
           ]}
         />
 
-        <h3 className="text-2xl font-semibold mt-6 mb-4">Technical Skills</h3>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <h3 className="text-xl sm:text-2xl font-semibold mt-3 sm:mt-4 mb-3">
+          Technical Skills
+        </h3>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
           <SkillCard
             category="Frontend Development"
             skills={[
@@ -70,9 +74,11 @@ export function ExperienceSection() {
           />
         </div>
 
-        <h3 className="text-2xl font-semibold mt-6 mb-4">Education</h3>
+        <h3 className="text-xl sm:text-2xl font-semibold mt-3 sm:mt-4 mb-3">
+          Education
+        </h3>
         <CardSpotlightWithBeams className="h-full">
-          <h4 className="text-xl font-semibold text-white relative z-20">
+          <h4 className="text-lg sm:text-xl font-semibold text-white relative z-20">
             Yashashwi Education Society International Institute of Management
           </h4>
           <p className="text-muted-foreground relative z-20">
@@ -102,12 +108,14 @@ function ExperienceCard({
 }) {
   return (
     <CardSpotlightWithBeams className="h-full">
-      <div className="flex flex-col md:flex-row md:justify-between mb-3 relative z-20">
+      <div className="flex flex-col sm:flex-row sm:justify-between mb-3 relative z-20">
         <div>
-          <h3 className="text-xl font-semibold text-white">{title}</h3>
+          <h3 className="text-lg sm:text-xl font-semibold text-white">
+            {title}
+          </h3>
           <p className="text-primary">{company}</p>
         </div>
-        <div className="text-right mt-2 md:mt-0">
+        <div className="text-left sm:text-right mt-1 sm:mt-0">
           <p className="text-muted-foreground">{period}</p>
           <p className="text-sm text-muted-foreground">{location}</p>
         </div>
@@ -132,7 +140,7 @@ function SkillCard({
 }) {
   return (
     <CardSpotlightWithBeams className="h-full">
-      <h4 className="text-lg font-semibold mb-3 relative z-20 text-white">
+      <h4 className="text-base sm:text-lg font-semibold mb-2 sm:mb-3 relative z-20 text-white">
         {category}
       </h4>
       <div className="flex flex-wrap gap-2 relative z-20">

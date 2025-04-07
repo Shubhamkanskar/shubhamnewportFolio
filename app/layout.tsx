@@ -20,13 +20,19 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="dark">
+      <head>
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+        />
+      </head>
       <body
         className={cn(
           inter.className,
           "bg-black text-white relative min-h-screen w-full overflow-y-auto overflow-x-hidden"
         )}
       >
-        <div className="fixed inset-0 w-full h-screen">
+        <div className="fixed inset-0 w-full h-full">
           <SparklesCore
             id="tsparticlesfullpage"
             background="transparent"
