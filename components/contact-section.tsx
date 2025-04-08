@@ -52,7 +52,7 @@ export function ContactSection() {
         />
       </div>
 
-      <div className="container mx-auto relative z-10">
+      <div className="container mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 relative z-10">
         <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-6 sm:mb-8">
           Get In Touch
         </h2>

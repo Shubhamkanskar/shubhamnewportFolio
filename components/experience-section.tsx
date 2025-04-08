@@ -4,7 +4,7 @@ import { CardSpotlightWithBeams } from "@/components/ui/card-spotlight-with-beam
 
 export function ExperienceSection() {
   return (
-    <section id="experience" className="py-3 sm:py-4 bg-black">
+    <section id="experience" className="py-3 sm:py-4 bg-black w-full">
       <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3">
         Experience
       </h2>

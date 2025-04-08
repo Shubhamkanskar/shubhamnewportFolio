@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 
 export function ProjectsSection() {
   return (
-    <section id="projects" className="py-3 sm:py-4 bg-black">
+    <section id="projects" className="py-3 sm:py-4 bg-black w-full">
       <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3">
         Projects
       </h2>
