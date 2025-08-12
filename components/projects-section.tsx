@@ -24,7 +24,7 @@ export function ProjectsSection() {
           demoLink="https://pdfai-taupe.vercel.app"
           codeLink="https://github.com/Shubhamkanskar/pdfai"
         />
-        <ProjectCard
+       {/*  <ProjectCard
           title="Portfolio Website"
           description="A modern, responsive portfolio website showcasing professional experience and projects."
           features={[
@@ -36,7 +36,7 @@ export function ProjectsSection() {
           technologies={["Next.js", "Shadcn", "Tailwind", "Framer Motion"]}
           demoLink="https://shubhamkanaskardev.xyz"
           codeLink="https://github.com/Shubhamkanskar/shubhamnewportFolio"
-        />
+        /> */}
         <ProjectCard
           title="My-Socials"
           description="A social media profile aggregator that allows users to manage multiple platform links."
