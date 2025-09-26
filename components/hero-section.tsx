@@ -8,8 +8,8 @@ export function HeroSection() {
   const downloadResume = () => {
     // Create a link element
     const link = document.createElement("a");
-    link.href = "/Shubham_Kanaskar_Resume.pdf";
-    link.download = "Shubham_Kanaskar_Resume.pdf";
+    link.href = "/ShubhamKanaskar_2+yearFullstack_Developer.pdf";
+    link.download = "ShubhamKanaskar_2+yearFullstack_Developer.pdf";
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);

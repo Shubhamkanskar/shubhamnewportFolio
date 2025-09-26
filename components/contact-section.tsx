@@ -30,7 +30,6 @@ export function ContactSection() {
     e.preventDefault();
     // Handle form submission - would connect to an API in a real implementation
     console.log(formState);
-    alert("Message sent! (This is a demo)");
     setFormState({ name: "", email: "", message: "" });
   };
 
