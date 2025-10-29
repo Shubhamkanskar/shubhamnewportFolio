@@ -2,37 +2,11 @@
 
 import type React from "react";
 
-import { useState } from "react";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
 import { SparklesCore } from "@/components/ui/sparkles";
-import { GithubIcon, LinkedinIcon, ExternalLink } from "lucide-react";
+import { GithubIcon, LinkedinIcon } from "lucide-react";
 import { CardSpotlightWithBeams } from "@/components/ui/card-spotlight-with-beams";
 
 export function ContactSection() {
-  const [formState, setFormState] = useState({
-    name: "",
-    email: "",
-    message: "",
-  });
-
-  const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) => {
-    setFormState({
-      ...formState,
-      [e.target.name]: e.target.value,
-    });
-  };
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Handle form submission - would connect to an API in a real implementation
-    console.log(formState);
-    setFormState({ name: "", email: "", message: "" });
-  };
-
   return (
     <section
       id="contact"
@@ -56,7 +30,7 @@ export function ContactSection() {
           Get In Touch
         </h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 max-w-5xl mx-auto">
+        <div className="max-w-3xl mx-auto">
           <CardSpotlightWithBeams className="h-full">
             <div className="space-y-2 sm:space-y-3 md:space-y-4 relative z-20">
               <h3 className="text-xl sm:text-2xl font-semibold text-white">
@@ -64,8 +38,10 @@ export function ContactSection() {
               </h3>
               <p className="text-gray-400 text-xs sm:text-sm md:text-base">
                 I'm currently available for freelance work and full-time
-                positions. If you have a project that needs some creative touch,
-                I'd love to hear about it!
+                positions. As a results-driven Full Stack Engineer with 2.3
+                years of experience, I specialize in delivering scalable web
+                solutions and would love to discuss how I can contribute to your
+                next project!
               </p>
 
               <div className="space-y-2 sm:space-y-3 max-w-full overflow-hidden">
@@ -157,54 +133,6 @@ export function ContactSection() {
                 </a>
               </div>
             </div>
-          </CardSpotlightWithBeams>
-
-          <CardSpotlightWithBeams className="h-full">
-            <form
-              onSubmit={handleSubmit}
-              className="space-y-3 sm:space-y-4 relative z-20 w-full"
-            >
-              <div>
-                <Input
-                  placeholder="Your Name"
-                  name="name"
-                  value={formState.name}
-                  onChange={handleChange}
-                  required
-                  className="bg-neutral-800/50 border-neutral-800 focus-visible:ring-primary hover:border-neutral-700 transition-colors text-sm sm:text-base"
-                />
-              </div>
-              <div>
-                <Input
-                  type="email"
-                  placeholder="Your Email"
-                  name="email"
-                  value={formState.email}
-                  onChange={handleChange}
-                  required
-                  className="bg-neutral-800/50 border-neutral-800 focus-visible:ring-primary hover:border-neutral-700 transition-colors text-sm sm:text-base"
-                />
-              </div>
-              <div>
-                <Textarea
-                  placeholder="Your Message"
-                  name="message"
-                  value={formState.message}
-                  onChange={handleChange}
-                  rows={4}
-                  required
-                  className="bg-neutral-800/50 border-neutral-800 focus-visible:ring-primary hover:border-neutral-700 transition-colors text-sm sm:text-base"
-                />
-              </div>
-              <div>
-                <Button
-                  type="submit"
-                  className="w-full bg-primary hover:bg-primary/90 transition-colors text-sm sm:text-base h-9 sm:h-10"
-                >
-                  Send Message
-                </Button>
-              </div>
-            </form>
           </CardSpotlightWithBeams>
         </div>
       </div>

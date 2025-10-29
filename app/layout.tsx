@@ -7,9 +7,9 @@ import { SparklesCore } from "@/components/ui/sparkles";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "Shubham Kanaskar | Full Stack Developer",
+  title: "Shubham Kanaskar | Full Stack Engineer",
   description:
-    "Portfolio of Shubham Kanaskar, a Full Stack Developer specializing in Next.js, React, and AI integration",
+    "Portfolio of Shubham Kanaskar, a Results-driven Full Stack Engineer with 2.3 years of experience delivering scalable web solutions using Next.js, Node.js, and TypeScript",
   generator: "v0.dev",
 };
 

@@ -1,6 +1,5 @@
 import { HeroSection } from "@/components/hero-section";
 import { ProjectsSection } from "@/components/projects-section";
-import { ContactSection } from "@/components/contact-section";
 import { ExperienceSection } from "@/components/experience-section";
 
 export default function Home() {
@@ -17,8 +16,6 @@ export default function Home() {
           </div>
         </div>
       </div>
-
-      <ContactSection />
     </main>
   );
 }

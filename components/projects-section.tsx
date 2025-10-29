@@ -1,7 +1,7 @@
 "use client";
 
 import { CardSpotlightWithBeams } from "@/components/ui/card-spotlight-with-beams";
-import { Check, ExternalLink } from "lucide-react";
+import { Check, ExternalLink, GithubIcon, LinkedinIcon } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export function ProjectsSection() {
@@ -12,44 +12,41 @@ export function ProjectsSection() {
       </h2>
       <div className="space-y-3">
         <ProjectCard
-          title="PDF AI"
-          description="A sophisticated PDF analysis platform leveraging Google's Gemini AI for intelligent document processing."
+          title="RepoVibe"
+          description="Delivered GitHub repository discovery platform with advanced filtering capabilities, serving 5K+ active users monthly and reducing repository search time by 60%."
           features={[
-            "Real-time PDF parsing and text extraction",
-            "Intelligent Q&A system with context-aware responses",
-            "Robust user authentication using Clerk",
-            "Convex DB for real-time data synchronization",
+            "Advanced filtering capabilities for repository discovery",
+            "Established secure authentication system using BetterAuth and Google OAuth",
+            "Maintaining 99.9% uptime and ensuring data protection compliance",
+            "Serving 5K+ active users monthly with optimized performance",
           ]}
-          technologies={["Next.js", "Convex DB", "Gemini AI", "Clerk"]}
+          technologies={[
+            "Next.js",
+            "PostgreSQL",
+            "Gemini AI",
+            "BetterAuth",
+            "Google OAuth",
+          ]}
+          demoLink="https://www.repovibe.space/"
+          codeLink="https://github.com/Shubhamkanskar/repovibe"
+        />
+
+        <ProjectCard
+          title="PDF AI"
+          description="Architected and deployed AI-powered document analysis platform leveraging Google's Gemini AI, processing 10K+ documents monthly with 95% accuracy rate."
+          features={[
+            "Real-time PDF parsing and intelligent Q&A functionality",
+            "Processing 10K+ documents monthly with 95% accuracy rate",
+            "Reducing document analysis time by 75% and improving user productivity",
+            "Advanced AI integration with Google's Gemini AI for intelligent processing",
+          ]}
+          technologies={["Next.js", "Convex DB", "Gemini AI", "TypeScript"]}
           demoLink="https://pdfai-taupe.vercel.app"
           codeLink="https://github.com/Shubhamkanskar/pdfai"
         />
-       {/*  <ProjectCard
-          title="Portfolio Website"
-          description="A modern, responsive portfolio website showcasing professional experience and projects."
-          features={[
-            "Advanced animations using Framer Motion",
-            "Custom reusable components with Shadcn/UI",
-            "Responsive design for all device sizes",
-            "Dark mode theme with custom styling",
-          ]}
-          technologies={["Next.js", "Shadcn", "Tailwind", "Framer Motion"]}
-          demoLink="https://shubhamkanaskardev.xyz"
-          codeLink="https://github.com/Shubhamkanskar/shubhamnewportFolio"
-        /> */}
-        <ProjectCard
-          title="My-Socials"
-          description="A social media profile aggregator that allows users to manage multiple platform links."
-          features={[
-            "Secure user authentication with Clerk",
-            "Responsive dashboard with real-time updates",
-            "MongoDB for data persistence",
-            "Custom link management system",
-          ]}
-          technologies={["Next.js", "Clerk", "MongoDB"]}
-          demoLink="https://my-socials-beta.vercel.app"
-          codeLink="https://github.com/Shubhamkanskar/mysocials"
-        />
+
+        <ContactCard />
+        <EducationCard />
       </div>
     </section>
   );
@@ -129,3 +126,131 @@ const Step = ({ title }: { title: string }) => {
     </li>
   );
 };
+
+function ContactCard() {
+  return (
+    <CardSpotlightWithBeams className="h-full">
+      <div className="space-y-2 sm:space-y-3 md:space-y-4 relative z-20">
+        <h3 className="text-xl sm:text-2xl font-semibold text-white">
+          Get In Touch
+        </h3>
+        <p className="text-gray-400 text-xs sm:text-sm md:text-base">
+          I'm currently available for freelance work and full-time positions. As
+          a results-driven Full Stack Engineer with 2.3 years of experience, I
+          specialize in delivering scalable web solutions and would love to
+          discuss how I can contribute to your next project!
+        </p>
+
+        <div className="space-y-2 sm:space-y-3 max-w-full overflow-hidden">
+          <a
+            href="mailto:shubhamkanaskar75@gmail.com"
+            className="flex items-center gap-1.5 sm:gap-2 text-primary hover:text-primary/80 transition-colors p-1.5 sm:p-2 rounded-md hover:bg-white/5 w-full overflow-hidden"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-4 w-4 sm:h-5 sm:w-5"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
+              <rect width="20" height="16" x="2" y="4" rx="2" />
+              <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+            </svg>
+            <span className="text-xs sm:text-sm md:text-base truncate">
+              shubhamkanaskar75@gmail.com
+            </span>
+          </a>
+          <a
+            href="tel:+919623501027"
+            className="flex items-center gap-1.5 sm:gap-2 text-primary hover:text-primary/80 transition-colors p-1.5 sm:p-2 rounded-md hover:bg-white/5 w-full"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-4 w-4 sm:h-5 sm:w-5"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+            </svg>
+            <span className="text-xs sm:text-sm md:text-base">
+              +91 9623501027
+            </span>
+          </a>
+          <a
+            href="https://www.shubhamkanaskardev.xyz/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-1.5 sm:gap-2 text-primary hover:text-primary/80 transition-colors p-1.5 sm:p-2 rounded-md hover:bg-white/5 w-full"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-4 w-4 sm:h-5 sm:w-5"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
+              <circle cx="12" cy="12" r="10" />
+              <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20" />
+              <path d="M2 12h20" />
+            </svg>
+            <span className="text-xs sm:text-sm md:text-base">
+              shubhamkanaskardev.xyz
+            </span>
+          </a>
+        </div>
+
+        <div className="flex gap-1.5 sm:gap-2 md:gap-3 mt-2">
+          <a
+            href="https://github.com/Shubhamkanskar"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="p-2.5 rounded-md bg-neutral-800 hover:bg-neutral-700 transition-colors"
+          >
+            <GithubIcon className="h-5 w-5 sm:h-6 sm:w-6" />
+            <span className="sr-only">GitHub</span>
+          </a>
+          <a
+            href="https://www.linkedin.com/in/shubham-kanaskar-237280157/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="p-2.5 rounded-md bg-neutral-800 hover:bg-neutral-700 transition-colors"
+          >
+            <LinkedinIcon className="h-5 w-5 sm:h-6 sm:w-6" />
+            <span className="sr-only">LinkedIn</span>
+          </a>
+        </div>
+      </div>
+    </CardSpotlightWithBeams>
+  );
+}
+
+function EducationCard() {
+  return (
+    <CardSpotlightWithBeams className="h-full">
+      <div className="space-y-2 sm:space-y-3 md:space-y-4 relative z-20">
+        <h3 className="text-xl sm:text-2xl font-semibold text-white">
+          Education
+        </h3>
+        <div className="space-y-2">
+          <h4 className="text-lg sm:text-xl font-semibold text-white">
+            Yashashwi Education Society International Institute of Management
+          </h4>
+          <p className="text-muted-foreground">
+            Master of Computer Application — CGPA: 8.0
+          </p>
+          <p className="text-sm text-muted-foreground">06/2022 – 05/2023</p>
+        </div>
+      </div>
+    </CardSpotlightWithBeams>
+  );
+}

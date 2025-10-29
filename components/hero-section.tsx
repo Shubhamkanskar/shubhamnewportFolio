@@ -26,8 +26,10 @@ export function HeroSection() {
             Shubham Kanaskar
           </h1>
           <p className="text-gray-400 text-base sm:text-lg md:text-xl max-w-md md:max-w-2xl mb-4">
-            Full-stack developer specializing in Next.js, React, and AI
-            integration
+            Results-driven Full Stack Engineer with 2.3 years of experience
+            delivering scalable web solutions using Next.js, Node.js, and
+            TypeScript. Proven track record in optimizing development workflows,
+            implementing AI integrations, and enhancing system performance.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 w-full sm:w-auto">
             <Button

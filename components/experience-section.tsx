@@ -10,15 +10,28 @@ export function ExperienceSection() {
       </h2>
       <div className="space-y-3">
         <ExperienceCard
-          title="Team Lead, Full Stack Developer"
+          title="Full Stack Developer"
           company="Deployh.ai"
           period="04/2024 – Present"
           location="Pune, India"
           responsibilities={[
-            "Lead the development of a scalable SaaS product using Next.js, Firebase, and React.js, integrating robust prompt engineering and AI capabilities",
-            "Design and implement scalable backend architectures with server-side actions, ensuring seamless integration with frontend components",
-            "Optimize application performance through efficient database queries and frontend optimizations, ensuring high-quality user experiences",
-            "Collaborate with and lead cross-functional teams to deliver high-quality software solutions, fostering a collaborative development environment",
+            "Optimized technology stack for GenAI products by implementing Next.js, Firebase, and Google Cloud services, reducing deployment cycles by 35% and enhancing system reliability",
+            "Engineered WhatsApp automation solutions utilizing Node.js and Firebase Auth, improving customer engagement response metrics by 40% and reducing manual intervention",
+            "Demonstrated ability to reduce operational costs by 40% and improve user engagement metrics through strategic technology implementations",
+            "Adept at collaborating with cross-functional teams to deliver high-impact solutions in fast-paced environments",
+          ]}
+        />
+
+        <ExperienceCard
+          title="Full Stack Developer"
+          company="Damsole Technologies"
+          period="09/2023 – 03/2024"
+          location="Pune, India"
+          responsibilities={[
+            "Spearheaded development of multi-vendor e-commerce platform using MERN stack, resulting in 25% increase in product listings and improved vendor onboarding efficiency",
+            "Implemented secure payment processing infrastructure with Stripe API and JWT authentication, decreasing transaction failures by 45% and enhancing user trust",
+            "Delivered scalable web solutions with focus on performance optimization and user experience enhancement",
+            "Collaborated with cross-functional teams to ensure timely delivery of high-quality software products",
           ]}
         />
 
@@ -27,67 +40,49 @@ export function ExperienceSection() {
         </h3>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
           <SkillCard
-            category="Frontend Development"
+            category="Frontend Technologies"
             skills={[
-              "React.js",
               "Next.js",
-              "JavaScript (ES6+)",
+              "React.js",
+              "TypeScript",
+              "Tailwind CSS",
               "HTML5",
-              "CSS3",
+              "ES6+",
             ]}
           />
           <SkillCard
-            category="UI/UX"
-            skills={["Tailwind CSS", "Framer Motion", "Responsive Design"]}
+            category="Backend Technologies"
+            skills={["Node.js", "Express.js", "REST APIs", "OAuth", "JWT"]}
           />
           <SkillCard
-            category="State Management"
-            skills={["Redux", "Context API", "Zustand"]}
+            category="AI & Machine Learning"
+            skills={["GenAI", "Prompt Engineering", "Gemini AI", "LangChain"]}
           />
           <SkillCard
-            category="Database & Backend"
+            category="Database Systems"
+            skills={["MongoDB", "PostgreSQL", "Firebase", "Firestore", "Redis"]}
+          />
+          <SkillCard
+            category="Cloud & DevOps"
             skills={[
-              "MongoDB",
-              "Express.js",
-              "Node.js",
-              "PostgreSQL",
-              "Prisma",
-              "Convex DB",
-              "Vector Databases",
+              "Google Cloud",
+              "AWS S3",
+              "Vercel",
+              "Docker",
+              "CI/CD",
+              "GitHub Actions",
             ]}
           />
           <SkillCard
-            category="Authentication & Security"
+            category="Testing & QA"
             skills={[
-              "Clerk",
-              "Auth.js (NextAuth)",
-              "Role-Based Access Control",
-            ]}
-          />
-          <SkillCard
-            category="AI Technologies"
-            skills={[
-              "Google Gemini AI",
-              "Prompt Engineering",
-              "Vector DB Integration",
+              "Jest",
+              "Unit Testing",
+              "Integration Testing",
+              "Test-Driven Development",
             ]}
           />
         </div>
-
-        <h3 className="text-xl sm:text-2xl font-semibold mt-3 sm:mt-4 mb-3">
-          Education
-        </h3>
-        <CardSpotlightWithBeams className="h-full">
-          <h4 className="text-lg sm:text-xl font-semibold text-white relative z-20">
-            Yashashwi Education Society International Institute of Management
-          </h4>
-          <p className="text-muted-foreground relative z-20">
-            Master of Computer Application — CGPA: 8.0
-          </p>
-          <p className="text-sm text-muted-foreground mt-1 relative z-20">
-            06/2022 – 05/2023
-          </p>
-        </CardSpotlightWithBeams>
       </div>
     </section>
   );
